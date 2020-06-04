@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>吱吱課評網 - 會員登入</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/e3962a2758.js" crossorigin="anonymous"></script>
+    <script defer src="/fontawesome-free-5.13.0-web/js/all.js"></script>
+
+    <script type="text/javascript">
+        function check_data()
+        {
+            if (document.myForm.sid.value.length == 0)
+                alert("帳號欄位不可以空白哦！");
+            else if (document.myForm.password.value.length == 0)
+                alert("密碼欄位不可以空白哦！");
+            else 
+                myForm.submit();
+        }
+    </script>
+</head>
+<body class='font'>
+    
+        <section id="login-title">
+            <div class='container d-flex flex-column'>
+                <div class="row align-items-center justify-content-center no-gutters min-vh-100">
+                    <div class="illustration-col col-8 col-md-6 col-lg-7 offset-md-1 order-md-2 mt-auto mt-md-0 pt-8 pb-4 py-md-11">
+                        <img src="zhizhi.png" class='img-fluid' alt="">
+                    </div>
+                    <div class="col-12 col-md-5 col-lg-4 order-md-1 mb-auto mb-md-0 pb-8 py-md-11">
+                        <img src="logo_black.png" class='logo ' alt="">
+                        <h1 class="text-cn">Welcome back</h1>
+                        <p class="text-cn">Enter your account details below.</p>
+
+                        <form action="checkpwd.php" method="post" name="myForm">
+                            <div class="form-group">
+                                <input name="sid" type="text" class='form-control input-bar' placeholder="學號">
+                            </div>
+                            <div class="form-group">
+                                <input name="password" type="password" class="form-control input-bar" placeholder="密碼">
+                            </div>
+                            <button type="reset" class="btn btn-primary reset" value="重填">重填</button>
+                            <button type="button" class="btn btn-primary submit" value="登入" onClick="check_data()">登入</button>
+                            <p class="text-cn">忘記密碼嗎？<a href="search_pwd.html">忘記密碼</a><br>還沒註冊嗎？<a href="register.html">加入會員</a></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+  </body>
+</html>
